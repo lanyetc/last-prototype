@@ -2,6 +2,9 @@ import { container } from "../common";
 
 const componentsStyle = {
   container,
+  fullContainer: {
+    height: "100%"
+  },
   brand: {
     color: "#FFFFFF",
     textAlign: "left"
@@ -22,7 +25,8 @@ const componentsStyle = {
     zIndex: "3",
     marginTop: "70px",
     paddingTop: "24px",
-    textAlign: "center"
+    textAlign: "center",
+    height: "100%"
   },
   mainRaised: {
     margin: "-60px 30px 0px",

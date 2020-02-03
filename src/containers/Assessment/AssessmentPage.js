@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh
@@ -10,6 +11,8 @@ import Button from '@material-ui/core/Button';
 import Card from "@material-ui/core/Card";
 // core components
 import Header from "../../components/Header/Header.js";
+import ChatbotPage from "./Chatbot/ChatbotPage";
+import ModulePage from "./Modules/ModulePage";
 
 import styles from "../../assets/jss/containers/assessmentPage";
 import { Grid } from "@material-ui/core";
@@ -19,39 +22,20 @@ const useStyles = makeStyles(styles);
 export default function AssessmentPage(props) {
     const classes = useStyles();
     const { ...rest } = props;
-    const modules = ["Module 1", "Module 2", "Module 3", "Module 4"]
     return (
-        <div>
+        <div className={classes.fullContainer}>
             <Header
                 brand="LAST 2.0"
                 fixed
-                color="dark"
+                color="transparent"
                 changeColorOnScroll={{
                     height: 400,
                     color: "white"
                 }}
                 {...rest}
             />
-            <div className={classes.main}>
-                <Typography variant="h2" align="center" gutterBottom={true}>
-                    Self Assessment Tool
-                </Typography>
-                <Typography variant="h6" align="center" gutterBottom={true}>
-                    Some Description.
-                </Typography>
-                <Button color="primary" variant="contained" className={classes.margin}>Start</Button>
-                <div className={classes.container}>
-                    <Grid container spacing={3}>
-                        {modules.map(item => (
-                            <Grid item xs key={item}>
-                                <Card className={classes.card} variant="outlined">
-                                    <Typography>{item}</Typography>
-                                </Card>
-                            </Grid>
-                        ))}
-                    </Grid>
-                </div>
-            </div>
+             <Route path="/assessment-page/chatbot" component={ChatbotPage} />
+             <Route path="/assessment-page/modules" component={ModulePage} />
         </div>
     );
 }

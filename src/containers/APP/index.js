@@ -8,6 +8,7 @@ import { Router, Route, Switch } from "react-router-dom";
 // pages for this product
 import HomePage from "../Home/Homepage";
 import AssessmentPage from "../Assessment/AssessmentPage";
+import ChatbotPage from "../Assessment/Chatbot/ChatbotPage"
 
 var hist = createBrowserHistory();
 
