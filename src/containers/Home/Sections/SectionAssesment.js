@@ -27,6 +27,7 @@ export default function SectionAssesment(props) {
             <div className={classes.container}>
                 <Grid container spacing={3}>
                     <Grid item xs>
+                        <Link to={"/assessment-page"} className={classes.link}>
                         <Card>
                             <CardActionArea>
                                 <CardMedia
@@ -43,6 +44,7 @@ export default function SectionAssesment(props) {
                                 </CardContent>
                             </CardActionArea>
                         </Card>
+                        </Link>
                     </Grid>
                 </Grid>
                 <Grid container spacing={3}>

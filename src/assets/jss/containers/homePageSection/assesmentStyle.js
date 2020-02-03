@@ -23,6 +23,9 @@ const assesmentStyle = {
     width: "17px",
     height: "17px",
     color: "#FFFFFF"
+  },
+  link: {
+    textDecoration: "none"
   }
 };
 
